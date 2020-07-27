@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>
+            ragul
+        </title>
+        <style>
+            @media screen and (max-width: 500px) {
+                .once{margin: 10px;}
+            }
+            body{background-color: black;}
+            table{border-collapse: collapse;}
+           th,td{border: 2px solid rgb(238, 81, 8);padding: 6px;text-decoration: none;color: white;}
+           th{font-size: 20px;text-transform: uppercase;text-decoration: none;}
+           td{font-size: 20px;text-transform: uppercase;}
+          #one{font-size: 20px;text-transform: uppercase;border-radius: 6px;border: 1px solid black;padding: 6px;color: rgb(12, 12, 12);}
+          #two{font-size: 20px;text-transform: uppercase;border-radius: 6px;border: 1px solid black;padding: 6px;color: rgb(12, 12, 12);}
+           label{font-size: 20px;text-transform: uppercase;color: white;}
+         </style>
+         <div style="outline: 2px solid black;outline-offset: 6px;background-color: rgb(7, 7, 7);padding: 10px;border-radius: 10px;">
+            <label>name :</label>  <input type="text" id="one" class="once">
+            <label>phno :</label>  <input type="text" id="two" class="once">
+            <button onclick="fun()" style="color: rgb(224, 11, 171);font-size: 20px;padding: 6px;border: 1px solid black;border-radius: 6px;background-color: orange;" class="once">Insert</button>
+         </div>
+<br>
+<br>
+<div style="outline: 3px black solid;outline-offset: 6px;width: 300px;background-color: black;">
+    <table id="tab">
+        <tr>
+            <th>name</th>
+            <th>phno</th>
+        </tr>
+      <tr>
+          <td>chethan</td>
+          <td>+919888997779</td>
+      </tr>
+    </table>
+</div>
+       <script>
+           var l1=document.getElementById("one");
+           var l2=document.getElementById("two");
+           var table=document.getElementById("tab");
+           function fun()
+           {
+               var newrow=table.insertRow();
+               var cell1=newrow.insertCell();
+               var cell2=newrow.insertCell();
+               cell1.innerHTML=l1.value;
+               cell2.innerHTML=l2.value;
+               l1.value="";
+               l2.value="";
+           }
+       </script>
+    </body>
+</html>
